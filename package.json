@@ -6,7 +6,7 @@
   "scripts": {
     "start:gateway": "pnpm --filter api-gateway start:dev",
     "start:user": "pnpm --filter user-service start:dev",
-    "dev": "pnpm run start:gateway & pnpm run start:user"
+    "dev": "concurrently \"pnpm run start:user\" \"pnpm run start:gateway\""
   },
   "keywords": [],
   "author": "",
@@ -27,6 +27,7 @@
     "@nestjs/testing": "^10.0.0",
     "@types/node": "^24.9.1",
     "amqp-connection-manager": "^5.0.0",
+    "concurrently": "^9.2.1",
     "typescript": "^5.3.0"
   }
 }
