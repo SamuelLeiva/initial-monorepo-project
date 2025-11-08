@@ -92,3 +92,5 @@ jest.config.js.map
 .pnpm-store/
 # Global pnpm logs
 .pnpm-debug.log
+
+generated

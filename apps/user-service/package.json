@@ -3,5 +3,11 @@
   "private": true,
   "scripts": {
     "start:dev": "nest start --watch"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.0"
+  },
+  "devDependencies": {
+    "prisma": "^6.19.0"
   }
 }
