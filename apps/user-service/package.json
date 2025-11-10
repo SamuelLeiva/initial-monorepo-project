@@ -5,9 +5,18 @@
     "start:dev": "nest start --watch"
   },
   "dependencies": {
-    "@prisma/client": "^6.19.0"
+    "@nestjs/jwt": "^11.0.1",
+    "@nestjs/passport": "^11.0.5",
+    "@prisma/client": "^6.19.0",
+    "bcrypt": "^6.0.0",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/passport-jwt": "^4.0.1",
+    "@types/passport-local": "^1.0.38",
     "prisma": "^6.19.0"
   }
 }

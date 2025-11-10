@@ -1,9 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { ClientProxy, ClientProxyFactory, Transport } from '@nestjs/microservices';
+import { RegisterDto } from './dto/register.dto';
+import { LoginDto } from './dto/login.dto';
 import { Observable } from 'rxjs';
 
 @Injectable()
-export class AppService {
+export class AuthService {
   private userClient: ClientProxy;
 
   constructor() {
@@ -17,11 +19,15 @@ export class AppService {
     });
   }
 
-  pingUserService(): Observable<any> {
-    return this.userClient.send('ping_user', {}); // patrón idéntico al user-service
+  registerUser(dto: RegisterDto): Observable<any> {
+    return this.userClient.send('register_user', dto);
   }
 
-  listAllUsers(): Observable<any> {
-    return this.userClient.send('list_all_users', {});
+  loginUser(dto: LoginDto): Observable<any> {
+    return this.userClient.send('login_user', dto);
+  }
+
+  getProfile(token: string): Observable<any> {
+    return this.userClient.send('get_user_me', { token });
   }
 }

@@ -57,7 +57,8 @@ rabbitmq-data/
 # ============================================
 
 # Prisma generated client
-prisma/generated/
+# prisma/generated/
+generated/
 # Migrations (optional to ignore if auto-generated per env)
 # prisma/migrations/
 
@@ -92,5 +93,3 @@ jest.config.js.map
 .pnpm-store/
 # Global pnpm logs
 .pnpm-debug.log
-
-generated
